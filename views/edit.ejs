@@ -1,0 +1,27 @@
+<%- include("./partials/header") %>
+<%- include("./partials/nav") %>
+
+<div class="w-full bg-zinc-800 h-screen >
+bg-center bg-cover flex items-center justify-center ">
+  <div class="w-[50%]  bg-zinc-700 px-8 py-10 rounded-[30px]">
+    <h1 class="text-center font-semibold capitalize text-white-300 text-2xl traking-tight leading-none">Edit details</h1>
+    <br>
+    <form action="/userUpdated" method="post">
+        <h4>Change Username</h4>
+      <input class="border-2 rounded-md block px-2 py-3 w-full" type="text" name="username" placeholder="Change Username" value="<%= user.username %> "/>
+      <br/>
+      <h4>Change fullname</h4>
+      <input class="border-2 rounded-md block px-2 py-3 w-full" type="text" name="fullname" placeholder="Change fullname" value="<%= user.fullname %>" />
+      <br/>
+      <h4>Change contact no.</h4>
+      <input class="border-2 rounded-md block px-2 py-3 w-full" type="number" name="contact" placeholder="Change contact no." value=<%= user.contact %> />
+      <br/>
+      <br>
+      <button class="block px-2 py-3 w-[50%] mx-auto btn bg-red-600 text-white rounded-full " type="submit">Save</button>
+      <br>
+           
+    </form>
+  </div>
+</div>
+
+<%- include("./partials/footer") %>

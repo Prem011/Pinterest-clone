@@ -1,0 +1,23 @@
+<%- include("./partials/header") %>
+<%- include("./partials/nav") %>
+<div class="w-full h-screen bg-zinc-800 px-10 py-8 text-white">
+    <div class="cards flex flex-wrap gap-10">
+
+        <% user.posts.forEach(function(elem){ %>
+
+            <div class="card w-80">
+                <div class=" w-full h-40 rounded-lg bg-cover bg-center overflow-hidden">
+                    <img class="bg-center bg-cover" src="/images/uploads/<%= elem.postImage %>" alt="">
+                </div>
+                <h5 class="mt-2 text-sm"><%= elem.postTitle %></h5>
+                <h5 class="mt-2 text-sm"><%= elem.postDescription %></h5>
+            </div>
+
+        <% }) %>
+
+        
+
+    </div>
+</div>
+
+<%- include("./partials/footer") %>
